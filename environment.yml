@@ -13,6 +13,7 @@ dependencies:
   - torchvision
   - torchaudio
   - seaborn
+  - pip
   - pip:
       - pandas==0.24.2
       - matching==0.1.1
