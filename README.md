@@ -21,13 +21,14 @@ The default settings are set in `task_settings.sh`. Before you run any script, s
 
 - Step 5: Run scripts.
 Computation reseources: We allocated one 32GB GPU and 50GB memory for experiments on 15K data and 100GB memeory for experiments on 100K data.
-    * For trials: customizing script `task_runner_trial.sh`.
+    * For trials: customizing script `task_runner_trial.sh`. This script can be customized to run a specific setting (a combination of a certain strategy, dataset and bachelor percentage) and will not take long time to run.
+    * The following scripts are for each group of experiments across different EA models, datasets and bachelor percentages, and thus will take a long time.
     * Run experiments about the "overall performance on 15K data": `task_runner_overall_perf.sh`.
     * Run experiments about the "overall performance on 100K data": `task_runner_overall_perf_100k.sh`. Required computing resources: 32G GPU and 100G memory.
     * Run experiments about the "effect of bachelors": `task_runner_effect_of_bachelor_percent.sh`.
     * Run experiments about the "effectiveness of bachelor recognizer": intermediate results have been saved with the generated dataset of ActiveEA. 
     For example, its path may be like 
-    `dataset/1011/overall_perf/D_W_15K_V1_BACH0.3_Alinet/STRUCT_UNCER_BACH_RECOG_CV_alpha0.1_batchsize100/temp/bach_recog_cv/`.
+    `path/to/generated_dataset/temp/bach_recog_cv/`.
     * Run experiments about the "sensitivity of parameters": `task_runner_effect_of_alpha.sh` and `task_runner_effect_of_batchsize.sh`.
 
 The generated datasets by different AL strategies will be saved to `dataset/` with naming pattern like `dataset/${seed}/${task_group}/${dataset_name}/${strategy_name}`. 
