@@ -21,7 +21,8 @@ The default settings are set in `task_settings.sh`. Before you run any script, s
 
 - Step 5: Run scripts.
 Computation reseources: We allocated one 32GB GPU and 50GB memory for experiments on 15K data and 100GB memeory for experiments on 100K data.
-    * For trials: customizing script `task_runner_trial.sh`.
+    * For trials: customizing script `task_runner_trial.sh`. This script can be customized to run a specific setting (a combination of a certain strategy, dataset and bachelor percentage) and will not take long time to run.
+    * The following scripts are for each group of experiments across different EA models, datasets and bachelor percentages, and thus will take a long time.
     * Run experiments about the "overall performance on 15K data": `task_runner_overall_perf.sh`.
     * Run experiments about the "overall performance on 100K data": `task_runner_overall_perf_100k.sh`. Required computing resources: 32G GPU and 100G memory.
     * Run experiments about the "effect of bachelors": `task_runner_effect_of_bachelor_percent.sh`.
