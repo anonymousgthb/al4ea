@@ -27,7 +27,7 @@ Computation reseources: We allocated one 32GB GPU and 50GB memory for experiment
     * Run experiments about the "effect of bachelors": `task_runner_effect_of_bachelor_percent.sh`.
     * Run experiments about the "effectiveness of bachelor recognizer": intermediate results have been saved with the generated dataset of ActiveEA. 
     For example, its path may be like 
-    `dataset/1011/overall_perf/D_W_15K_V1_BACH0.3_Alinet/STRUCT_UNCER_BACH_RECOG_CV_alpha0.1_batchsize100/temp/bach_recog_cv/`.
+    `path/to/generated_dataset/temp/bach_recog_cv/`.
     * Run experiments about the "sensitivity of parameters": `task_runner_effect_of_alpha.sh` and `task_runner_effect_of_batchsize.sh`.
 
 The generated datasets by different AL strategies will be saved to `dataset/` with naming pattern like `dataset/${seed}/${task_group}/${dataset_name}/${strategy_name}`. 
